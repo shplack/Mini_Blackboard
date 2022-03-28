@@ -12,6 +12,5 @@ typedef struct list_element_t {
 typedef struct list_t {
     unsigned long size;
     ListElement * head;
-    ListElement * tail;
 } List;
 
