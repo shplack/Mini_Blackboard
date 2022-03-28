@@ -8,3 +8,5 @@ typedef struct person_name_t {
     char last[MAX_NAME_CHAR];
 } PersonName;
 
+char *getNameStr(PersonName name);
+

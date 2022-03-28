@@ -28,7 +28,7 @@ bool insert(List * const list, void * const data) {
     return true;
 }
 
-bool insertAt(List * const list, void * const data, unsigned long index) {
+bool insertAt(List * const list, void * const data, unsigned long const index) {
     if (list == NULL)
         return false;
 
@@ -82,7 +82,7 @@ long long search(List * const list, void const * const data) {
     return -1;
 }
 
-long long search_mem(List * const list, void const * const data, unsigned long size) {
+long long search_mem(List * const list, void const * const data, unsigned long const size) {
     if (list == NULL)
         return -1;
 
@@ -172,4 +172,14 @@ void enqueue(List * const list, void * const data) {
 
 void * dequeue(List * const list) {
     return pop(list);
+}
+
+bool isEmpty(List const * const list) {
+    if (list == NULL)
+        return true;
+
+    if (list->size == 0)
+        return true;
+
+    return false;
 }

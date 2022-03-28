@@ -19,7 +19,7 @@ Email newEmail(char const * const email)
     return new_email;
 }
 
-char const * emailToString(Email const email)
+char * emailToString(Email const email)
 {
     unsigned long alias_size = strlen(email.alias);
     unsigned long domain_size = strlen(email.domain);

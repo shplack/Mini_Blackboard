@@ -7,3 +7,6 @@ typedef struct email_t {
     char domain[MAX_EMAIL_CHARS];
     char root[MAX_EMAIL_CHARS];
 } Email;
+
+Email newEmail(char const * email);
+char * emailToString(Email email);

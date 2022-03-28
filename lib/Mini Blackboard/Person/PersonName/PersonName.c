@@ -14,3 +14,22 @@ PersonName newName(
 
     return name;
 }
+
+char *getNameStr(PersonName const name) {
+    unsigned long size = strlen(name.first) + strlen(name.middle) + strlen(name.last) + 2;
+    char * fullName = malloc(size);
+
+    strncpy(fullName,
+            name.first,
+            strlen(name.first));
+
+    strncpy(fullName + strlen(name.first) + 1,
+            name.middle,
+            strlen(name.middle));
+
+    strncpy(fullName + strlen(name.first) + strlen(name.middle) + 2,
+            name.last,
+            strlen(name.middle));
+
+    return fullName;
+}
